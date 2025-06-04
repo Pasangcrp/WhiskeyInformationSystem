@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="cqu.wis.view.QueryController">
+   <children>
+      <HBox prefHeight="400.0" prefWidth="600.0">
+         <children>
+            <VBox maxHeight="-Infinity" minHeight="-Infinity" prefHeight="205.0" prefWidth="286.0">
+               <children>
+                  <Label prefHeight="63.0" prefWidth="289.0" text="Output" textAlignment="CENTER" underline="true">
+                     <font>
+                        <Font name="Arial Black" size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </Label>
+                  <GridPane>
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="143.0" text="Price" GridPane.rowIndex="3">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                           <padding>
+                              <Insets left="30.0" right="60.0" />
+                           </padding>
+                        </Label>
+                        <Label prefHeight="34.0" prefWidth="143.0" text="Region" GridPane.rowIndex="2">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                           <padding>
+                              <Insets left="30.0" right="60.0" />
+                           </padding>
+                        </Label>
+                        <Label contentDisplay="RIGHT" prefHeight="29.0" prefWidth="143.0" text="Age" GridPane.rowIndex="1">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                           <padding>
+                              <Insets left="30.0" right="60.0" />
+                           </padding>
+                        </Label>
+                        <Label prefHeight="30.0" prefWidth="146.0" text="Distillery">
+                           <GridPane.margin>
+                              <Insets />
+                           </GridPane.margin>
+                           <padding>
+                              <Insets left="30.0" />
+                           </padding>
+                        </Label>
+                        <TextField fx:id="distilleryField" editable="false" GridPane.columnIndex="1" />
+                        <TextField fx:id="ageField" editable="false" layoutX="153.0" layoutY="12.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="regionField" editable="false" layoutX="153.0" layoutY="43.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="priceField" editable="false" layoutX="153.0" layoutY="73.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Button fx:id="nextButton" mnemonicParsing="false" onAction="#handleNext" prefHeight="26.0" prefWidth="100.0" text="Next" GridPane.rowIndex="4">
+                           <GridPane.margin>
+                              <Insets left="22.0" />
+                           </GridPane.margin>
+                        </Button>
+                        <Button fx:id="prevButton" layoutX="32.0" layoutY="134.0" mnemonicParsing="false" onAction="#handlePrevious" prefHeight="26.0" prefWidth="100.0" text="Previous" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                           <GridPane.margin>
+                              <Insets left="22.0" />
+                           </GridPane.margin>
+                        </Button>
+                     </children>
+                  </GridPane>
+               </children>
+            </VBox>
+            <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="224.0" prefWidth="314.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="63.0" prefWidth="317.0" text="Messages" underline="true">
+                     <font>
+                        <Font name="Arial Black" size="15.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                     </padding>
+                  </Label>
+                  <TextArea fx:id="messageArea" prefHeight="148.0" prefWidth="314.0" text="Records found&#10;">
+                     <VBox.margin>
+                        <Insets left="15.0" right="20.0" />
+                     </VBox.margin>
+                  </TextArea>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <VBox layoutY="210.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="190.0" prefWidth="600.0">
+         <children>
+            <Label prefHeight="53.0" prefWidth="600.0" text="Input" textAlignment="CENTER" underline="true">
+               <font>
+                  <Font name="Arial Black" size="15.0" />
+               </font>
+               <padding>
+                  <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+               </padding>
+            </Label>
+            <GridPane>
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="294.39996337890625" minWidth="10.0" prefWidth="166.6000183105469" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="438.40003967285156" minWidth="10.0" prefWidth="138.99998779296874" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="438.40003967285156" minWidth="3.800012207031216" prefWidth="29.40001220703124" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="438.40003967285156" minWidth="10.0" prefWidth="266.99998779296874" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="29.00003662109374" minHeight="10.0" prefHeight="29.00003662109374" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="42.80000000000001" minHeight="10.0" prefHeight="30.599963378906253" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="15.800024414062506" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Button fx:id="allMaltsButton" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleAllMalts" prefHeight="26.0" prefWidth="100.0" text="All Malts">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <GridPane.margin>
+                        <Insets left="25.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="regionButton" layoutX="35.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleRegion" prefHeight="26.0" prefWidth="127.0" text="Malts from Region" GridPane.rowIndex="1">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <GridPane.margin>
+                        <Insets left="25.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="ageRangeButton" layoutX="35.0" layoutY="37.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleAgeRange" prefHeight="27.0" prefWidth="127.0" text="Malts in Age Range" GridPane.rowIndex="2">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <GridPane.margin>
+                        <Insets left="25.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="clearButton" layoutX="35.0" layoutY="63.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleClear" prefHeight="22.0" prefWidth="78.0" text="Clear" GridPane.rowIndex="3">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <GridPane.margin>
+                        <Insets left="25.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <Button fx:id="exitButton" contentDisplay="RIGHT" layoutX="39.0" layoutY="88.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#handleExit" prefHeight="22.0" prefWidth="92.0" text="Exit" textAlignment="JUSTIFY" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <GridPane.margin>
+                        <Insets left="300.0" />
+                     </GridPane.margin>
+                  </Button>
+                  <TextField fx:id="regionInput" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="134.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="ageRangeLeft" layoutX="176.0" layoutY="43.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="134.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label prefHeight="18.0" prefWidth="30.0" text="to" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <GridPane.margin>
+                        <Insets left="7.0" />
+                     </GridPane.margin>
+                  </Label>
+                  <TextField fx:id="ageRangeRight" layoutX="176.0" layoutY="72.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="134.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
